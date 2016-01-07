@@ -1,9 +1,0 @@
-# this is command alias for `actions/http_status_codes.yaml` action
-# allows to run ChatOps command: `show nginx stats on "web"`
-# eq: /opt/stackstorm/virtualenvs/ansible/bin/ansible web --become -m shell -a "awk '{print \$9}' /var/log/nginx/access.log|sort |uniq -c |sort -k1,1nr 2>/dev/null|column -t"
----
-name: chatops.http_status_codes
-action_ref: st2-chatops-aliases.http_status_codes
-description: Show sorted http status codes from nginx on hosts
-formats:
-  - "show nginx stats on {{hosts}}"

@@ -1,8 +1,0 @@
-# refers to `ansible` st2 integration pack:
-# https://github.com/StackStorm/st2contrib/tree/master/packs/ansible
----
-name: "chatops.ansible_local"
-action_ref: "ansible.command_local"
-description: "Run ansible command on local machine"
-formats:
-  - "ansible {{args}}"

@@ -1,0 +1,6 @@
+---
+name: "galaxy_install"
+action_ref: "st2-chatops-aliases.galaxy_install"
+description: "galaxy install"
+formats:
+  - galaxy install

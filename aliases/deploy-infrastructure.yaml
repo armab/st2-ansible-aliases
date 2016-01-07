@@ -1,0 +1,6 @@
+---
+name: "deploy_infrastructure"
+action_ref: "st2-chatops-aliases.deploy_infrastructure"
+description: "deploy infrastructure"
+formats:
+  - deploy infrastructure

@@ -1,9 +1,0 @@
-# this is command alias for `actions/server_status.yaml` action
-# allows to run ChatOps command: `status 'web'`
-# eq: `/opt/stackstorm/virtualenvs/ansible/bin/ansible web --module-name=ping`
----
-name: chatops.ansible_server_status
-action_ref: st2-chatops-aliases.server_status
-description: Show status for hosts (ansible ping module)
-formats:
-  - "status {{hosts}}"

@@ -1,0 +1,41 @@
+---
+
+name: "run_task_with_stack_layer"
+description:  "Run playbooks in /tasks with 'stack' and 'layer' set"
+runner_type: "local-shell-script"
+entry_point: "lib/ansible-playbook.sh"
+enabled: true
+parameters:
+  env:
+    default:
+      ANSIBLE_CONFIG: "/opt/omnia/infrastructure/config/remote_ansible.cfg"
+
+  cwd:
+    description: "Working directory where the command will be executed in eg. chdir"
+    type: string
+    default: "/opt/omnia/infrastructure/tasks"
+    immutable: true
+
+  playbook:
+    type: string
+    description: "playbook file"
+    required: true
+    position: 0
+
+  stack:
+    type: string
+    description: "stack"
+    required: true
+    position: 1
+
+  layer:
+    type: string
+    description: "layer"
+    required: true
+    position: 2
+
+  timeout:
+    description: "timeout"
+    type: integer
+    # 20 minutes
+    default: 1200

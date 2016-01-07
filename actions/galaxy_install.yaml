@@ -1,0 +1,16 @@
+---
+
+name: "galaxy_install"
+description:  "Galaxy install ansiblr requirements"
+runner_type: "local-shell-cmd"
+enabled: true
+parameters:
+
+  env:
+    default:
+      ANSIBLE_CONFIG: "/opt/omnia/infrastructure/config/remote_ansible.cfg"
+
+  cmd:
+    description: "Command to run"
+    immutable: true
+    default: "ansible-galaxy install --force  -r /opt/omnia/infrastructure/ansible-requirements.yml"

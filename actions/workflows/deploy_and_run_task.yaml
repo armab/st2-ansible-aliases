@@ -1,0 +1,13 @@
+---
+  chain:
+    -
+      name: "deploy_infrastructure_repo"
+      ref: "st2-chatops-aliases.run_task"
+      params:
+        playbook: "deploy-infrastructure-repo.yml"
+      on-success: "run_task"
+    -
+      name: "run_task"
+      ref: "st2-chatops-aliases.run_task"
+      params:
+        playbook: "{{playbook}}"

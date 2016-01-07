@@ -1,0 +1,6 @@
+---
+name: "run_task_with_stack_layer"
+action_ref: "st2-chatops-aliases.run_task_with_stack_layer"
+description: "Run task with stack and layer"
+formats:
+  - run {{ playbook }} stack {{ stack }} layer {{ layer }}

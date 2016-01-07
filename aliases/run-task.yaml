@@ -1,0 +1,6 @@
+---
+name: "run_task"
+action_ref: "st2-chatops-aliases.run_task"
+description: "Run task"
+formats:
+  - play task {{ playbook }}

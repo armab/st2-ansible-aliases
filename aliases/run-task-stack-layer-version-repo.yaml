@@ -1,0 +1,6 @@
+---
+name: "run_task_stack_layer_version_repo"
+action_ref: "st2-chatops-aliases.run_task_stack_layer_version_repo"
+description: "Run Ansible playbook with stack, layer, version, and repo"
+formats:
+  - go {{ playbook }} stack {{ stack }} layer {{ layer }} version {{ version }} app_repo {{ app_repo }}

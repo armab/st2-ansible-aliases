@@ -1,0 +1,22 @@
+---
+
+name: "deploy_infrastructure"
+description:  "Run Omnia tasks"
+runner_type: "local-shell-cmd"
+enabled: true
+parameters:
+
+  env:
+    default:
+      ANSIBLE_CONFIG: "/opt/omnia/infrastructure/config/remote_ansible.cfg"
+
+  cmd:
+    description: "Command to run"
+    immutable: true
+    default: "ansible-playbook deploy-infrastructure-repo.yml"
+
+  cwd:
+    description: "Working directory where the command will be executed in eg. chdir"
+    type: string
+    default: "/opt/omnia/infrastructure/tasks"
+    immutable: true

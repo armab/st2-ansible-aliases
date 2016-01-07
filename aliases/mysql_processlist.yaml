@@ -1,9 +1,0 @@
-# this is command alias for `actions/mysql_processlist.yaml` action
-# allows to run ChatOps command: `show mysql processlist`
-# eq: /opt/stackstorm/virtualenvs/ansible/bin/ansible db --become --become-user=root -m shell -a "mysql --execute='SHOW PROCESSLIST;' | expand -t 10"
----
-name: chatops.mysql_processlist
-action_ref: st2-chatops-aliases.mysql_processlist
-description: Show MySQL processlist
-formats:
-  - "show mysql processlist {{hosts=db}}"

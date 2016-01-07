@@ -1,9 +1,0 @@
-# this is command alias for `actions/cowsay.yaml` action
-# allows to run ChatOps command: `cowsay "Holy ChatOps Cow!"`
-# eq: cowsay "Holy ChatOps Cow!"
----
-name: chatops.cowsay
-action_ref: st2-chatops-aliases.cowsay
-description: Draws a cow that says what you want
-formats:
-  - "cowsay {{message}}"
